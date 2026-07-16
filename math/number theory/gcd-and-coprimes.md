@@ -157,3 +157,8 @@ One valid identity is:
 ```text
 30(-1) + 18(2) = 6
 ```
+
+## GCD Identities:
+```text
+gcd(a,a) = |a|
+```
