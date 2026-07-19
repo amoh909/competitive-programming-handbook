@@ -82,7 +82,6 @@ class Node {
 }
 
 // Iterative method to perform level order traversal
-public class GfG {
     public static ArrayList<ArrayList<Integer>> levelOrder(Node root)
     {
         if (root == null)
@@ -127,4 +126,48 @@ Time: O(n)
 Space: O(n)
 ```
 
-Credits to: https://www.geeksforgeeks.org/profile/kartik
+## DFS Traversal 
+
+### InOrder Traversal Java Implementation
+
+Traverse the left subtree, i.e., call Inorder(left-subtree)
+Visit the root
+Traverse the right subtree, i.e., call Inorder(right-subtree)
+
+
+```java
+class Node {
+    int key;
+    Node left, right;
+
+    public Node(int item)
+    {
+        key = item;
+        left = right = null;
+    }
+}
+
+    /* Given a binary tree, print its nodes in inorder*/
+    void printInorder(Node node)
+    {
+        if (node == null)
+            return;
+
+        /* first recur on left child */
+        printInorder(node.left);
+
+        /* then print the data of node */
+        System.out.print(node.key + " ");
+
+        /* now recur on right child */
+        printInorder(node.right);
+    }
+
+```
+
+### Complexity
+
+```text
+Time: O(n)
+Space: O(log(n))
+```
